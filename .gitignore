@@ -3,3 +3,8 @@ playground/*
 dist/*
 !dist/.gitkeep
 .DS_Store
+*.log
+.cache
+*bak
+.history
+.temp/**
