@@ -178,6 +178,11 @@ export const handleAuthorize = async function (ctx, next) {
 
 WIP
 
+
+## How to public Module 
+Chinese Guide
+https://segmentfault.com/a/1190000041396991
+
 ## License
 
 [MIT](LICENSE)
