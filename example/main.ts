@@ -1,6 +1,5 @@
 import { BaseAbility,CheckRecordOptions } from "../mod.ts";
 import { log } from "../deps.ts";
-import { VERSION } from "../version.ts";
 
 class Ability extends BaseAbility {
   constructor(ctx:any, user:any) {
@@ -36,7 +35,10 @@ class Ability extends BaseAbility {
 
 
 try {
-  log.info(`Module Version (version.ts): ${VERSION}`);
+  const ability = new Ability({}, { role: 'admin' });
+  const result = ability.can('update', { type: 'topic', user_id: 1 }, { type: 'topic' });
+  log.info(result);
+
 } catch (error) {
   console.error(error);
   Deno.exit();
